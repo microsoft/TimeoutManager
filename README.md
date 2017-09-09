@@ -1,5 +1,6 @@
 # Timeout Manager
 This project aims to support services with managing the timeout counting of requests.
+This utility is used in production by some Microsoft products.
 
 ## The Interface
 There are three public members to the TimeoutManager<T> class & interface
