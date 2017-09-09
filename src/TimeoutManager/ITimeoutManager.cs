@@ -15,14 +15,14 @@ namespace Microsoft.TimeoutManager
         /// Starts the timeout count for a given object
         /// </summary>
         /// <param name="timeoutItem">The object to count the timeout for</param>
-        /// <returns>True if successfully added timeout, false otherwise</returns>
+        /// <returns>'true' if a timeout count has started for the timeoutItem. 'false' if the timeoutItem's timeout is already being counted.</returns>
         bool CountTimeout(T timeoutItem);
 
         /// <summary>
         /// Cancels the timeout count for the object if it has not already been timed out
         /// </summary>
-        /// <param name="cancelledItem">The timeout-object to cancel</param>
-        /// <returns>True if successfully cancelled, false otherwise</returns>
+        /// <param name="cancelledItem">The timeout-item to cancel</param>
+        /// <returns>True if successfully cancelled the item's timeout counting, false if the cancelledItem's timeout was not being counted</returns>
         bool TryCancelTimeout(T cancelledItem);
 
         /// <summary>
