@@ -1,5 +1,25 @@
+# Timeout Manager
+This project aims to support services with managing the timeout counting of requests.
 
-# Contributing
+## The Interface
+There are three public members to the TimeoutManager<T> class & interface
+* bool CountTimeout(T timeoutItem)
+Starts the timeout count for a given object
+Returns 'true' if a timeout count has started for the timeoutItem. Returns 'false' if the timeoutItem's timeout is already being counted.
+
+* bool TryCancelTimeout(T cancelledItem)
+Cancels the timeout count for the object if it has not already been timed out
+Returns 'true' if the cancelledItem's timeout count was successfully cancelled, false if the cancelledItem's timeout was not being counted
+
+* event ItemTimedOutEventHandler<T> ItemTimedOut
+An event which is invoked every time an object times out
+The delegate used by this event is using an EventArgs type which also has a TimedOutItem property of type T
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
