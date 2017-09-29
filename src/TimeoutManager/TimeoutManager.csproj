@@ -40,10 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMultiTimeoutManager.cs" />
     <Compile Include="ItemTimedOutEvent.cs" />
     <Compile Include="ITimeoutManager.cs" />
+    <Compile Include="ITimeoutManagerFactory.cs" />
+    <Compile Include="MultiTimeoutManager.cs" />
     <Compile Include="QueueWithRemove.cs" />
     <Compile Include="TimeoutManager.cs" />
+    <Compile Include="TimeoutManagerConstants.cs" />
+    <Compile Include="TimeoutManagerFactory.cs" />
     <Compile Include="TimeoutManagerItemWrapper.cs" />
     <Compile Include="TimeoutManagerItemWrapperComparer.cs" />
   </ItemGroup>
